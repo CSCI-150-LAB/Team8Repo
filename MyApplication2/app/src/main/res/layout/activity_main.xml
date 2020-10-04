@@ -62,17 +62,32 @@
         android:id="@+id/button2"
         android:layout_width="99dp"
         android:layout_height="48dp"
+<<<<<<< Updated upstream
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="110dp"
         android:layout_marginRight="110dp"
+=======
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+>>>>>>> Stashed changes
         android:layout_marginBottom="346dp"
         android:text="REGISTER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
+<<<<<<< Updated upstream
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
+=======
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="1.0" />
+>>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/textView"
