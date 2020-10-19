@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
     EditText  username, password;
     Button btnLOGIN;
     Button btn2REGISTER;
+    Button btnADMINLOG;
     //DBHelper DB;
     FirebaseAuth authFirebaseAcc;
     private FirebaseAuth.AuthStateListener authStateListenerAcc;
@@ -39,6 +40,7 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.password);
         btnLOGIN = findViewById(R.id.button);
         btn2REGISTER = findViewById(R.id.button2);
+        btnADMINLOG = findViewById(R.id.button3);
         //DB = new DBHelper(this);
 
         authStateListenerAcc = new FirebaseAuth.AuthStateListener() {
@@ -88,6 +90,14 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
+            }
+        });
+
+        btnADMINLOG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent admLog = new Intent(getApplicationContext(), AdminLogin.class);
+                startActivity(admLog);
             }
         });
     }

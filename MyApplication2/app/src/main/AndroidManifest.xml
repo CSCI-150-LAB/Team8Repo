@@ -13,6 +13,8 @@
         <activity android:name=".Userprofile" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Register" />
+        <activity android:name=".AdminLogin" />
+        <activity android:name=".AdminSignUp" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
