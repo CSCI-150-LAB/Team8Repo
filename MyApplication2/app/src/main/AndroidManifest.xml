@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< Updated upstream
-=======
-        <activity android:name=".Register"></activity>
->>>>>>> Stashed changes
-        <activity android:name=".MainActivity">
+        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".Userprofile" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Register" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -4,67 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".EditProfile">
 
     <TextView
-        android:id="@+id/RegisterView"
-        android:layout_width="71dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="36dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:id="@+id/EditUserprofile"
+        android:layout_width="109dp"
+        android:layout_height="49dp"
+        android:text=" Edit Profile"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/RegisterEmail"
+        android:id="@+id/EditUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="First Last"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/RegisterPassword"
+        android:id="@+id/EditUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/EditUserName" />
 
     <EditText
-        android:id="@+id/RegisterRePassword"
+        android:id="@+id/EditUserDOB"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="DOB: MM/DD/YY"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditUserEmail" />
+
+    <EditText
+        android:id="@+id/EditUserPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
-        android:hint="RePassword"
-        android:inputType="textPassword"
+        android:hint="Phone Number"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/EditUserDOB" />
 
     <Button
-        android:id="@+id/RegisterBtm"
+        android:id="@+id/EditProfileAccept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Register"
+        android:layout_marginTop="80dp"
+        android:text="Done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterRePassword" />
-
+        app:layout_constraintTop_toBottomOf="@+id/EditUserPhone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

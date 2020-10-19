@@ -1,5 +1,6 @@
 package com.example.myapplication2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,22 +10,30 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Register extends AppCompatActivity {
 
     EditText username, password, repassword;
     Button Register;
-    DBHelper DB;
+    //DBHelper DB;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        username = findViewById(R.id.RegisterUserName);
+        mAuth = FirebaseAuth.getInstance();
+        username = findViewById(R.id.RegisterEmail);
         password = findViewById(R.id.RegisterPassword);
         repassword = findViewById(R.id.RegisterRePassword);
         Register = findViewById(R.id.RegisterBtm);
-        DB = new DBHelper(this);
+        //DB = new DBHelper(this);
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,31 +42,46 @@ public class Register extends AppCompatActivity {
                 String pass = password.getText().toString();
                 String repass = repassword.getText().toString();
 
-                if(user.equals("")|pass.equals("")){
+                if(user.equals("")|pass.equals("")|repass.equals("")){
                     Toast.makeText(Register.this,"Please fill in info", Toast.LENGTH_SHORT).show();
                 }
-                else {
-                    if (pass.equals(repass)) {
-                        boolean checkUser = DB.checkUserName(user);
-                        if (checkUser == false) {
-                            Boolean insert = DB.InsertData(user, pass);
-                            if (insert == true) {
-                                Toast.makeText(Register.this, "Register successfully", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(Register.this, "Register fail", Toast.LENGTH_SHORT).show();
+                else if(pass.length()<6){
+                    Toast.makeText(Register.this, "Password need to be 6 or more", Toast.LENGTH_SHORT).show();
+                }
+                else if(pass.equals(repass)){
+                    mAuth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(!task.isSuccessful()){
+                                Toast.makeText(Register.this, "Register Unsuccessful", Toast.LENGTH_SHORT).show();
                             }
-                        } else {
-                            Toast.makeText(Register.this, "User already exist", Toast.LENGTH_SHORT).show();
+                            else{
+                                UserData User = new UserData("","","","");
+
+                                FirebaseDatabase.getInstance().getReference("Users")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .setValue(User).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Intent goLogin = new Intent(Register.this, Login.class);
+                                            startActivity(goLogin);
+                                        }
+                                        else{
+                                            Toast.makeText(Register.this, "Register Successful", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                            }
                         }
-                    }
-                    else{
-                        Toast.makeText(Register.this, "Password do not match", Toast.LENGTH_SHORT).show();
-                    }
+                    });
+                }
+                else {
+                    Toast.makeText(Register.this,"Error Occurred", Toast.LENGTH_SHORT).show();
                 }
             }
 
         });
     }
+
 }
