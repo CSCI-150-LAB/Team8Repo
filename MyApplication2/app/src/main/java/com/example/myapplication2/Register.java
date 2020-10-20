@@ -46,14 +46,14 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this,"Please fill in info", Toast.LENGTH_SHORT).show();
                 }
                 else if(pass.length()<6){
-                    Toast.makeText(Register.this, "Password need to be 6 or more", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Password needs to be 6 characters or more", Toast.LENGTH_SHORT).show();
                 }
                 else if(pass.equals(repass)){
                     mAuth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(Register.this, "Register Unsuccessful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 UserData User = new UserData("","","","");
@@ -68,7 +68,7 @@ public class Register extends AppCompatActivity {
                                             startActivity(goLogin);
                                         }
                                         else{
-                                            Toast.makeText(Register.this, "Register Successful", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });
