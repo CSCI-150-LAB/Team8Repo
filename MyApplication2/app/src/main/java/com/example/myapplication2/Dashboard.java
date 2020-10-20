@@ -55,6 +55,8 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Dashboard.this, "GO TO SEARCH", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Search.class);
+                startActivity(intent);
             }
         });
         btn_order.setOnClickListener(new View.OnClickListener() {
