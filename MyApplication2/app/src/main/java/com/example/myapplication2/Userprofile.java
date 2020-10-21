@@ -22,10 +22,11 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Userprofile extends AppCompatActivity {
 
-    Button EditProfile, BackDashboard;
+    Button EditProfile, BackDashboard, resetPassword, LogOut;
     String UName, UEmail, UPhone, UDOB;
     private FirebaseUser User;
     private DatabaseReference UserReference;
+    private FirebaseAuth mAuth;
     private String UserID;
 
     @Override
@@ -33,6 +34,7 @@ public class Userprofile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userprofile);
 
+        mAuth = FirebaseAuth.getInstance();
         User = FirebaseAuth.getInstance().getCurrentUser();
         UserReference = FirebaseDatabase.getInstance().getReference("Users");
         UserID = User.getUid();
@@ -44,7 +46,8 @@ public class Userprofile extends AppCompatActivity {
 
         EditProfile = (Button)findViewById(R.id.Editprofile);
         BackDashboard = (Button)findViewById(R.id.BackDashBoard);
-
+        resetPassword = findViewById(R.id.resetPass);
+        LogOut = findViewById(R.id.LogOut);
 
         UserReference.child(UserID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -82,6 +85,23 @@ public class Userprofile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Userprofile.this, ResetPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        LogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Intent intent = new Intent(Userprofile.this, Login.class);
                 startActivity(intent);
             }
         });

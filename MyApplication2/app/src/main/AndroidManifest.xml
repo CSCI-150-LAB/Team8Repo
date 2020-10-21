@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".ResetPassword"></activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".Userprofile" />
         <activity android:name=".Dashboard" />
         <activity
             android:name=".Search"
             android:parentActivityName=".Dashboard">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -24,6 +25,7 @@
         <activity
             android:name=".Select"
             android:parentActivityName=".Search">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -39,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
