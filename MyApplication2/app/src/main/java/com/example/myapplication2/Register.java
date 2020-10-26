@@ -68,7 +68,7 @@ public class Register extends AppCompatActivity {
                                             startActivity(goLogin);
                                         }
                                         else{
-                                            Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Register.this, "Data Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });

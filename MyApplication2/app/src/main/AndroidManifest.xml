@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".DealerSignUp"></activity>
+        <activity android:name=".DealerLogin" />
+        <activity android:name=".Login" />
+        <activity android:name=".ResetPassword" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Userprofile" />
         <activity android:name=".Dashboard" />
@@ -34,7 +37,7 @@
         <activity android:name=".Register" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".AdminSignUp" />
-        <activity android:name=".Login">
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

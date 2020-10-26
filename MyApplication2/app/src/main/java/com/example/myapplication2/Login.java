@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,8 +20,7 @@ public class Login extends AppCompatActivity {
     EditText  username, password;
     Button btnLOGIN;
     Button btn2REGISTER;
-    Button btnADMINLOG;
-    //DBHelper DB;
+    Button btnHome;
     FirebaseAuth authFirebaseAcc;
     private FirebaseAuth.AuthStateListener authStateListenerAcc;
 
@@ -36,12 +34,11 @@ public class Login extends AppCompatActivity {
 
 
         authFirebaseAcc = FirebaseAuth.getInstance();
-        username = findViewById(R.id.loginEmail);
-        password = findViewById(R.id.password);
-        btnLOGIN = findViewById(R.id.button);
-        btn2REGISTER = findViewById(R.id.button2);
-        btnADMINLOG = findViewById(R.id.button3);
-        //DB = new DBHelper(this);
+        username = findViewById(R.id.UserloginEmail);
+        password = findViewById(R.id.Userpassword);
+        btnLOGIN = findViewById(R.id.UserLoginbtm);
+        btn2REGISTER = findViewById(R.id.UserRegister);
+        btnHome = findViewById(R.id.User2Home);
 
         authStateListenerAcc = new FirebaseAuth.AuthStateListener() {
             FirebaseUser FirebaseAcc = authFirebaseAcc.getCurrentUser();
@@ -76,8 +73,8 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Login Unsuccessful", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                Intent goToHome = new Intent(Login.this,Dashboard.class);
-                                startActivity(goToHome);
+                                Intent goToDash = new Intent(Login.this,Dashboard.class);
+                                startActivity(goToDash);
                             }
                         }
                     });
@@ -93,11 +90,11 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        btnADMINLOG.setOnClickListener(new View.OnClickListener() {
+        btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent admLog = new Intent(getApplicationContext(), AdminLogin.class);
-                startActivity(admLog);
+                Intent go2home = new Intent(getApplicationContext(), Home.class);
+                startActivity(go2home);
             }
         });
     }

@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class AdminLogin extends AppCompatActivity {
 
     EditText et_email, et_psswrd;
-    Button btn_signIn, btn_signUp;
+    Button btn_signIn, btn_signUp, go2Home;
 
     private FirebaseAuth auth;
 
@@ -31,6 +31,8 @@ public class AdminLogin extends AppCompatActivity {
         et_psswrd = findViewById(R.id.et_psswrd);
         btn_signIn = findViewById(R.id.btn_signIn);
         btn_signUp = findViewById(R.id.btn_signUp);
+
+        go2Home = findViewById(R.id.Admin2Home);
 
         auth = FirebaseAuth.getInstance();
 
@@ -48,7 +50,16 @@ public class AdminLogin extends AppCompatActivity {
                 startActivity(adminSignUpIntent);
             }
         });
+
+        go2Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminLogin.this, Home.class);
+                startActivity(intent);
+            }
+        });
     }
+
     private void loginAdmin(String email, String password) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(AdminLogin.this, new OnCompleteListener<AuthResult>() {
             @Override
