@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_cart, btn_settings, btn_reservation, btn_chat, btn_search, btn_order, btn_calendar, btn_about, btn_profile;
+    Button btn_cart, btn_settings, btn_reservation, btn_chat, btn_search, btn_logout, btn_calendar, btn_about, btn_profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btn_reservation = (Button)findViewById(R.id.buttonRESERVATION);
         btn_chat = (Button)findViewById(R.id.buttonCHAT);
         btn_search = (Button)findViewById(R.id.buttonSEARCH);
-        btn_order = (Button)findViewById(R.id.buttonCHECK);
+        btn_logout = (Button)findViewById(R.id.buttonlogout);
         btn_calendar = (Button)findViewById(R.id.buttonCALENDAR);
         btn_about = (Button)findViewById(R.id.buttonABOUT);
         btn_profile = (Button)findViewById(R.id.buttonPROFILE);
@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "GO TO SEARCH", Toast.LENGTH_SHORT).show();
             }
         });
-        btn_order.setOnClickListener(new View.OnClickListener() {
+        btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "MAKE ORDER", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "SIGN OUT", Toast.LENGTH_SHORT).show();
             }
         });
         btn_calendar.setOnClickListener(new View.OnClickListener() {
