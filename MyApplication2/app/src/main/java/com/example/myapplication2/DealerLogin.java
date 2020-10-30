@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ public class DealerLogin extends AppCompatActivity {
     Button DealerReg;
     Button DealerHome;
     FirebaseAuth mAuth;
+    TextView DealerFP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class DealerLogin extends AppCompatActivity {
         DealerHome = findViewById(R.id.Dealer2Home);
         DealerUsername = findViewById(R.id.DealerLoginEmail);
         DealerPassword = findViewById(R.id.DealerLoginPassword);
+
+        DealerFP = findViewById(R.id.DealerForgotPassword);
 
         DealerLoginbtm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +78,15 @@ public class DealerLogin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Deal2Home = new Intent(DealerLogin.this, Home.class);
                 startActivity(Deal2Home);
+            }
+        });
+
+        DealerFP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent DealertoFP = new Intent(DealerLogin.this, ForgotPassword.class);
+                DealertoFP.putExtra("User","Dealer");
+                startActivity(DealertoFP);
             }
         });
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +20,7 @@ public class AdminLogin extends AppCompatActivity {
 
     EditText et_email, et_psswrd;
     Button btn_signIn, btn_signUp, go2Home;
-
+    TextView AdminFP;
     private FirebaseAuth auth;
 
     @Override
@@ -35,6 +36,8 @@ public class AdminLogin extends AppCompatActivity {
         go2Home = findViewById(R.id.Admin2Home);
 
         auth = FirebaseAuth.getInstance();
+
+        AdminFP = findViewById(R.id.AdminFP);
 
         btn_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +59,15 @@ public class AdminLogin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AdminLogin.this, Home.class);
                 startActivity(intent);
+            }
+        });
+
+        AdminFP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Admin2FP = new Intent(AdminLogin.this, ForgotPassword.class);
+                Admin2FP.putExtra("User","Admin");
+                startActivity(Admin2FP);
             }
         });
     }

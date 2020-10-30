@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,7 @@ public class Login extends AppCompatActivity {
     Button btnHome;
     FirebaseAuth authFirebaseAcc;
     private FirebaseAuth.AuthStateListener authStateListenerAcc;
+    TextView ForgotPass;
 
     //String correct_username = "customer";
     //String correct_password = "mycars1234";
@@ -39,6 +41,8 @@ public class Login extends AppCompatActivity {
         btnLOGIN = findViewById(R.id.UserLoginbtm);
         btn2REGISTER = findViewById(R.id.UserRegister);
         btnHome = findViewById(R.id.User2Home);
+
+        ForgotPass = findViewById(R.id.ForgotPassword);
 
         authStateListenerAcc = new FirebaseAuth.AuthStateListener() {
             FirebaseUser FirebaseAcc = authFirebaseAcc.getCurrentUser();
@@ -97,6 +101,16 @@ public class Login extends AppCompatActivity {
                 startActivity(go2home);
             }
         });
+
+        ForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toForgotPass = new Intent(Login.this, ForgotPassword.class);
+                toForgotPass.putExtra("User","User");
+                startActivity(toForgotPass);
+            }
+        });
+
     }
 
 }
