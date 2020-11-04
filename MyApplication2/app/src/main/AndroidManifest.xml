@@ -12,6 +12,7 @@
         <activity android:name=".ForgotPassword"></activity>
         <activity android:name=".DealerSignUp" />
         <activity android:name=".DealerLogin" />
+        <activity android:name=".DealerDashBoard" />
         <activity android:name=".Login" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".EditProfile" />

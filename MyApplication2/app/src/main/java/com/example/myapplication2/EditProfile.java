@@ -40,31 +40,59 @@ public class EditProfile extends AppCompatActivity {
         EditPhone = (EditText)findViewById(R.id.EditUserPhone);
 
         EditDone = (Button)findViewById(R.id.EditProfileAccept);
+        String Extra = getIntent().getStringExtra("EditPro");
 
-        EditDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Name = EditName.getText().toString();
-                Email = EditEmail.getText().toString();
-                DOB = EditDOB.getText().toString();
-                Phone = EditPhone.getText().toString();
-                UserData user = new UserData(Name,Phone,Email,DOB);
-                FirebaseDatabase.getInstance().getReference("Users")
-                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+        if(Extra.equals("Customer")) {
+            EditDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Name = EditName.getText().toString();
+                    Email = EditEmail.getText().toString();
+                    DOB = EditDOB.getText().toString();
+                    Phone = EditPhone.getText().toString();
+                    UserData user = new UserData(Name, Phone, Email, DOB);
+                    FirebaseDatabase.getInstance().getReference("Users")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 Toast.makeText(EditProfile.this, "Data save successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditProfile.this, Userprofile.class);
                                 startActivity(intent);
-                            }
-                            else{
+                            } else {
                                 Toast.makeText(EditProfile.this, "Data fail to save", Toast.LENGTH_SHORT).show();
                             }
                         }
-                });
-            }
-        });
+                    });
+                }
+            });
+        }
+        if(Extra.equals("Dealer")){
+            EditDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Name = EditName.getText().toString();
+                    Email = EditEmail.getText().toString();
+                    DOB = EditDOB.getText().toString();
+                    Phone = EditPhone.getText().toString();
+                    UserData user = new UserData(Name, Phone, Email, DOB);
+                    FirebaseDatabase.getInstance().getReference("Dealers")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(EditProfile.this, "Data save successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(EditProfile.this, Userprofile.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(EditProfile.this, "Data fail to save", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+            });
+        }
     }
 }

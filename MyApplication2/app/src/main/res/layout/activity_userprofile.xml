@@ -120,9 +120,10 @@
         android:id="@+id/BackDashBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
         android:layout_marginTop="48dp"
         android:text="Back"
-        app:layout_constraintEnd_toStartOf="@+id/LogOut"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Userphone" />
 
@@ -130,22 +131,12 @@
         android:id="@+id/resetPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
         android:text="Reset Password"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/LogOut"
-        app:layout_constraintTop_toBottomOf="@+id/Userphone" />
-
-    <Button
-        android:id="@+id/LogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="LogOut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Userphone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

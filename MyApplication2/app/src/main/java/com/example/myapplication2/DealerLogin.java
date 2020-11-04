@@ -50,10 +50,8 @@ public class DealerLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(DealerLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            //Intent intent = new Intent(DealerLogin.this, Dashboard.class);
-                            //intent to go to Dealer page
-                            //startActivity(intent);
-                            //finish();
+                            Intent intent = new Intent(DealerLogin.this, DealerDashBoard.class);
+                            startActivity(intent);
                         }
                         else{
                             Toast.makeText(DealerLogin.this, "Login Fail", Toast.LENGTH_SHORT).show();
