@@ -91,4 +91,54 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="carbrand_filter">
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Chevy</item>
+        <item>Dodge</item>
+        <item>Ferrari</item>
+        <item>Ford</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Jaguar</item>
+        <item>Lamborghini</item>
+        <item>Lexus</item>
+        <item>Mercedes-Benz</item>
+        <item>Nissan</item>
+        <item>Porsche</item>
+        <item>Toyota</item>
+    </string-array>
+
+    <string-array name="cartype_filter">
+        <item>Coupe</item>
+        <item>Hatchback</item>
+        <item>Luxury</item>
+        <item>Minivan</item>
+        <item>Pickup</item>
+        <item>Sedan</item>
+        <item>Sports</item>
+        <item>SUV</item>
+    </string-array>
+
+    <string-array name="carcolor_filter">
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Brown</item>
+        <item>Green</item>
+        <item>Orange</item>
+        <item>Purple</item>
+        <item>Red</item>
+        <item>Silver</item>
+        <item>White</item>
+        <item>Yellow</item>
+    </string-array>
+
+    <string-array name="drivewheel_filter">
+        <item>All Wheel</item>
+        <item>Front Wheel</item>
+        <item>Rear Wheel</item>
+    </string-array>
+
+
 </resources>
