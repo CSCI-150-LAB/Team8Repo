@@ -80,7 +80,7 @@ public class AdminLogin extends AppCompatActivity {
                     Toast.makeText(AdminLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                     //login placeholder
                     //
-                    Intent dash = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent dash = new Intent(getApplicationContext(), AdminBoard.class);
                     startActivity(dash);
                     //
                     //placeholder

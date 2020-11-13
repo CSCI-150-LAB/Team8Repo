@@ -80,7 +80,7 @@ public class AdminSignUp extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("Admins").child(user.getUid()).updateChildren(map);
 
                     Toast.makeText(AdminSignUp.this, "Register Successful!", Toast.LENGTH_SHORT).show();
-                    Intent dash = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent dash = new Intent(getApplicationContext(), AdminBoard.class);
                     startActivity(dash);
                     finish();
                 } else {

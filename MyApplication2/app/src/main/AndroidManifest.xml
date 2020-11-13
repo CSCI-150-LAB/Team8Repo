@@ -38,6 +38,7 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".AdminLogin" />
+        <activity android:name=".AdminBoard" />
         <activity android:name=".AdminSignUp" />
         <activity android:name=".Home">
             <intent-filter>
