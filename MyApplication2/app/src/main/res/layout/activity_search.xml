@@ -4,269 +4,244 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.reservemycar.MainActivity">
+    tools:context=".Search">
 
     <Spinner
-        android:id="@+id/cartype_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drivewheel_spinner" />
-
-    <TextView
-        android:id="@+id/feature3_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 3"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature3_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature3_spinner" />
-
-    <Spinner
-        android:id="@+id/feature4_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature2_spinner" />
-
-    <TextView
-        android:id="@+id/feature4_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 4"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature4_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature4_spinner" />
-
-    <TextView
-        android:id="@+id/feature1_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 1"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature1_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature1_spinner" />
-
-    <Spinner
-        android:id="@+id/feature2_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartype_spinner" />
-
-    <TextView
-        android:id="@+id/cartype_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Type"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cartype_spinner"
-        app:layout_constraintStart_toStartOf="@+id/cartype_spinner" />
-
-    <Spinner
-        android:id="@+id/feature7_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature5_spinner" />
-
-    <Spinner
-        android:id="@+id/carbrand_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="170dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/feature7_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 7"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature7_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature7_spinner" />
-
-    <TextView
-        android:id="@+id/carbrand_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Brand"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/carbrand_spinner"
-        app:layout_constraintStart_toStartOf="@+id/carbrand_spinner" />
-
-    <Spinner
-        android:id="@+id/feature6_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature4_spinner" />
-
-    <Spinner
-        android:id="@+id/feature3_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature1_spinner" />
-
-    <Spinner
-        android:id="@+id/feature5_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature3_spinner" />
-
-    <TextView
-        android:id="@+id/feature8_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 8"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature8_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature8_spinner" />
-
-    <TextView
-        android:id="@+id/feature6_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 6"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature6_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature6_spinner" />
-
-    <Spinner
-        android:id="@+id/carcolor_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carbrand_spinner" />
-
-    <TextView
-        android:id="@+id/feature2_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Feature 2"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature2_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature2_spinner" />
-
-    <Spinner
-        android:id="@+id/feature1_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carcolor_spinner" />
-
-    <Spinner
-        android:id="@+id/drivewheel_spinner"
+        android:id="@+id/typeSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="180dp"
         android:layout_height="32dp"
         android:layout_marginTop="170dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:entries="@array/cartype_filter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/feature5_spinner_label"
-        android:layout_width="105dp"
+        android:id="@+id/featuresTextView"
+        android:layout_width="90dp"
         android:layout_height="28dp"
-        android:text="Feature 5"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Features"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/feature5_spinner"
-        app:layout_constraintStart_toStartOf="@+id/feature5_spinner" />
-
-    <TextView
-        android:id="@+id/drivewheel_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Drive Wheel"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/drivewheel_spinner"
-        app:layout_constraintStart_toStartOf="@+id/drivewheel_spinner" />
-
-    <Spinner
-        android:id="@+id/feature8_spinner"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feature6_spinner" />
-
-    <TextView
-        android:id="@+id/carcolor_spinner_label"
-        android:layout_width="105dp"
-        android:layout_height="28dp"
-        android:text="Color"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/carcolor_spinner"
-        app:layout_constraintStart_toStartOf="@+id/carcolor_spinner" />
-
-    <Button
-        android:id="@+id/reserve_submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="#F44336"
-        android:onClick="goto_selectpage"
-        android:text="FIND"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/touchscreenCheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/typeSpinnerTextView"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:gravity="right"
+        android:text="Type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/typeSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/typeSpinner" />
+
+    <Spinner
+        android:id="@+id/brandSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="170dp"
+        android:entries="@array/carbrand_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/brandSpinnerTextView"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:gravity="right"
+        android:text="Brand"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/brandSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/brandSpinner" />
+
+    <Spinner
+        android:id="@+id/colorSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:entries="@array/carcolor_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brandSpinner" />
+
+    <Spinner
+        android:id="@+id/drivewheelSpinner"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:entries="@array/drivewheel_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner" />
+
+    <TextView
+        android:id="@+id/drivewheelSpinnerTextView"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:gravity="right"
+        android:text="Drivetrain"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/drivewheelSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/drivewheelSpinner" />
+
+    <TextView
+        android:id="@+id/colorSpinnerTextView"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:gravity="right"
+        android:text="Color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/colorSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/colorSpinner" />
+
+    <Button
+        android:id="@+id/searchsubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Search"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minibarCheckBox" />
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/redcarimageView"
         android:layout_width="420dp"
         android:layout_height="89dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/redcar" />
+
+    <TextView
+        android:id="@+id/selectoptionsTextView"
+        android:layout_width="355dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Please select vehicle options below"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redcarimageView" />
+
+    <CheckBox
+        android:id="@+id/touchscreenCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:text="Touch Screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorSpinner" />
+
+    <CheckBox
+        android:id="@+id/entertainCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Entertainment Syst."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/touchscreenCheckBox" />
+
+    <CheckBox
+        android:id="@+id/leatherseatsCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Leather Seats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entertainCheckBox" />
+
+    <CheckBox
+        android:id="@+id/minibarCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Minibar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leatherseatsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/gpsCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="GPS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/touchscreenCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/drivewheelSpinner" />
+
+    <CheckBox
+        android:id="@+id/trailerCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Trailer Hookup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/entertainCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/gpsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/heatedseatsCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Heated Seats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leatherseatsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/trailerCheckBox" />
+
+    <CheckBox
+        android:id="@+id/jacuzziCheckBox"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Jacuzzi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/minibarCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/heatedseatsCheckBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
