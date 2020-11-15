@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+{
+  "project_info": {
+    "project_number": "531832151315",
+    "firebase_url": "https://mycar-7c297.firebaseio.com",
+    "project_id": "mycar-7c297",
+    "storage_bucket": "mycar-7c297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531832151315:android:982b25f1c6f14c476d4ee6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531832151315-9qhllc0mlpp9glbeqp1hllab80t3cldn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoy1fc6e7DhYL4TCnGj8dCudeyF1lZu6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531832151315-9qhllc0mlpp9glbeqp1hllab80t3cldn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+=======
 
 
 
@@ -1478,3 +1520,4 @@
   </body>
 </html>
 
+>>>>>>> 9bc453a7628dfa95e1da65029a5a2d24db2ce7c4

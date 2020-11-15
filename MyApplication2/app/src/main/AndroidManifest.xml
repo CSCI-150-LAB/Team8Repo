@@ -9,7 +9,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Calendar"></activity>
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".DealerSignUp" />
+        <activity android:name=".DealerLogin" />
+        <activity android:name=".DealerDashBoard" />
+        <activity android:name=".Login" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".Userprofile" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".Search"
+            android:parentActivityName=".Dashboard">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity>
+        <activity
+            android:name=".Select"
+            android:parentActivityName=".Search">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Search" />
+        </activity>
+        <activity android:name=".Register" />
+        <activity android:name=".AdminLogin" />
+        <activity android:name=".AdminBoard" />
+        <activity android:name=".AdminSignUp" />
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
