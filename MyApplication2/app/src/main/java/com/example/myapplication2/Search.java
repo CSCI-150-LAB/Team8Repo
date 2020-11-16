@@ -75,6 +75,7 @@ public class Search extends AppCompatActivity {
     Car car26 = new Car("Ferrari","Sports","Red","All Wheel",false,false,false,false,false,false,false,false,2);
     Car car27 = new Car("Ferrari","Luxury","Black","All Wheel",false,false,false,false,false,false,false,false,2);
 
+
     /*
     Car car1 = new Car("Audi","Coupe","Black","Front Wheel",true,true,false,false,true,true,false,false,2);
     Car car2 = new Car("Audi","Coupe","White","Front Wheel",true,true,false,false,true,true,false,false,2);

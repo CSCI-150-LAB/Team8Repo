@@ -13,11 +13,15 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import java.util.ArrayList;
 
 //public class Select implements Car extends AppCompatActivity
 public class Select extends AppCompatActivity {
+
     /*
     TextView textView_result1_1;
     TextView textView_result1_2;
@@ -218,6 +222,35 @@ public class Select extends AppCompatActivity {
     TextView textView_result50_1;
     TextView textView_result50_2;
     TextView textView_result50_3;
+
+
+    /*
+    TextView textView_result1;
+    TextView textView_result2;
+    TextView textView_result3;
+    TextView textView_result4;
+    TextView textView_result5;
+    TextView textView_result6;
+    TextView textView_result7;
+    TextView textView_result8;
+    TextView textView_result9;
+    TextView textView_result10;
+    TextView textView_result11;
+    TextView textView_result12;
+    TextView textView_result13;
+    TextView textView_result14;
+    TextView textView_result15;
+    TextView textView_result16;
+    TextView textView_result17;
+    TextView textView_result18;
+    TextView textView_result19;
+    TextView textView_result20;
+    TextView textView_result21;
+    TextView textView_result22;
+    TextView textView_result23;
+    TextView textView_result24;
+    TextView textView_result25;
+
      */
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
@@ -238,6 +271,7 @@ public class Select extends AppCompatActivity {
 
         // Set textview fields
         /*
+
         textView_result1_1 = findViewById(R.id.textView_result1_1);
         textView_result1_2 = findViewById(R.id.textView_result1_2);
         textView_result1_3 = findViewById(R.id.textView_result1_3);
@@ -337,9 +371,37 @@ public class Select extends AppCompatActivity {
         textView_result25_1 = findViewById(R.id.textView_result25_1);
         textView_result25_2 = findViewById(R.id.textView_result25_2);
         textView_result25_3 = findViewById(R.id.textView_result25_3);
+
+        textView_result1 = findViewById(R.id.textView_result1);
+        textView_result2 = findViewById(R.id.textView_result2);
+        textView_result3 = findViewById(R.id.textView_result3);
+        textView_result4 = findViewById(R.id.textView_result4);
+        textView_result5 = findViewById(R.id.textView_result5);
+        textView_result6 = findViewById(R.id.textView_result6);
+        textView_result7 = findViewById(R.id.textView_result7);
+        textView_result8 = findViewById(R.id.textView_result8);
+        textView_result9 = findViewById(R.id.textView_result9);
+        textView_result10 = findViewById(R.id.textView_result10);
+        textView_result11 = findViewById(R.id.textView_result11);
+        textView_result12 = findViewById(R.id.textView_result12);
+        textView_result13 = findViewById(R.id.textView_result13);
+        textView_result14 = findViewById(R.id.textView_result14);
+        textView_result15 = findViewById(R.id.textView_result15);
+        textView_result16 = findViewById(R.id.textView_result16);
+        textView_result17 = findViewById(R.id.textView_result17);
+        textView_result18 = findViewById(R.id.textView_result18);
+        textView_result19 = findViewById(R.id.textView_result19);
+        textView_result20 = findViewById(R.id.textView_result20);
+        textView_result21 = findViewById(R.id.textView_result21);
+        textView_result22 = findViewById(R.id.textView_result22);
+        textView_result23 = findViewById(R.id.textView_result23);
+        textView_result24 = findViewById(R.id.textView_result24);
+        textView_result25 = findViewById(R.id.textView_result25);
+
          */
 
         // ------------------------------------------------------
+
 
         // First line | Brand - Type - Color - Drivetrain
         /*
@@ -390,6 +452,7 @@ public class Select extends AppCompatActivity {
         int indexcounter = 0;
 
         // ============================= LOOP ==============================
+
         for (int i = 0; i < resultsize; i = i + 3)
         {
             l1_temp = new LinearLayout(this);
@@ -443,6 +506,7 @@ public class Select extends AppCompatActivity {
 
             // Third line | Leather Seats - Heated Seats - Minibar - Jacuzzi
             if (inventoryList.get(indextrackList.get(indexcounter)).getLeather()) {
+
                 t_temp2.append(" - ");
                 t_temp3.append("Leather");
             }
@@ -488,9 +552,6 @@ public class Select extends AppCompatActivity {
 
 
         } // End of LOOP
-
-
-
 
 
     }
