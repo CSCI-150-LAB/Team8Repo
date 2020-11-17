@@ -36,15 +36,16 @@
                         android:src="@drawable/car"
                         android:layout_gravity="center"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CAR DASHBOARD"
-                        android:textColor="#000000"
                         android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="23sp"
                         android:layout_marginTop="10dp"
+                        android:text="USER DASHBOARD"
+                        android:textColor="#000000"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
 
                         />
 
