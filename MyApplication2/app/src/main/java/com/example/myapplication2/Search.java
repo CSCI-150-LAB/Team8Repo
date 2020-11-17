@@ -375,10 +375,10 @@ public class Search extends AppCompatActivity {
                         Intent intent = new Intent(Search.this, Select.class);
 
                         // Pass inventory ArrayList
-                        intent.putExtra("inventorylist", inventory);
+                        intent.putExtra("inventoryList", inventory);
 
                         // Pass indextrack ArrayList of filter matches
-                        intent.putExtra("indextracklist", indextrack);
+                        intent.putExtra("indextrackList", indextrack);
 
                         startActivity(intent);
 
