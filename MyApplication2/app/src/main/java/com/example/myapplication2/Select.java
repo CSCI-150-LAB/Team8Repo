@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -18,10 +19,14 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 //public class Select implements Car extends AppCompatActivity
 public class Select extends AppCompatActivity {
+    //public class Select extends AppCompatActivity implements View.OnClickListener {
+
 
     /*
     TextView textView_result1_1;
@@ -267,9 +272,6 @@ public class Select extends AppCompatActivity {
         // Re-create indextracker Arraylist
         ArrayList<Integer> indextrackList = (ArrayList<Integer>) getIntent().getSerializableExtra("indextracklist");
 
-        // Globals
-
-
         // Set textview fields
         /*
 
@@ -420,138 +422,155 @@ public class Select extends AppCompatActivity {
         // Dynamic generation of results
 
         int resultsize = indextrackList.size();
-        resultsize = resultsize * 3;
-        ScrollView ScrollView = findViewById(R.id.ScrollView);
-        LinearLayout resultlist = findViewById(R.id.resultlist);
 
-        LinearLayout[] resultgroup = new LinearLayout[resultsize];
-        LinearLayout l1_temp;
-        LinearLayout.LayoutParams l1_temp_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 300);
+        LinearLayout mainLayoutVert = findViewById(R.id.resultlist);
 
-            LinearLayout[] textgroup = new LinearLayout[resultsize];
-            LinearLayout l2_temp;
-            LinearLayout.LayoutParams l2_temp_params = new LinearLayout.LayoutParams(800, LinearLayout.LayoutParams.MATCH_PARENT);
+        LinearLayout topLayoutVert;
+        LinearLayout.LayoutParams topLayoutVertParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 300);
 
-                TextView[] textlist = new TextView[resultsize];
-                TextView t_temp1;
-                TextView t_temp2;
-                TextView t_temp3;
+            LinearLayout bottomLayoutHoriz;
+            LinearLayout.LayoutParams bottomLayoutHorizParams = new LinearLayout.LayoutParams(800, LinearLayout.LayoutParams.MATCH_PARENT);
+
+                TextView txtView1;
+                TextView txtView2;
+                TextView txtView3;
                 LinearLayout.LayoutParams t_temp_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
             Button[] btnlist = new Button[resultsize];
-            Button b_temp;
-            LinearLayout.LayoutParams b_temp_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            Button button;
+            LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
-        int indexcounter = 0;
+        View.OnClickListener[] listenerlist = new View.OnClickListener[resultsize];
 
         // ============================= LOOP ==============================
 
-        for (int i = 0; i < resultsize; i = i + 3)
+        for (int i = 0; i < resultsize; i++)
         {
-            l1_temp = new LinearLayout(this);
-            l1_temp.setLayoutParams(l1_temp_params);
-            l1_temp.setOrientation(LinearLayout.HORIZONTAL);
+            topLayoutVert = new LinearLayout(this);
+            topLayoutVert.setLayoutParams(topLayoutVertParams);
+            topLayoutVert.setOrientation(LinearLayout.HORIZONTAL);
 
-                l2_temp = new LinearLayout(this);
-                l2_temp.setLayoutParams(l2_temp_params);
-                l2_temp.setOrientation(LinearLayout.VERTICAL);
+                bottomLayoutHoriz = new LinearLayout(this);
+                bottomLayoutHoriz.setLayoutParams(bottomLayoutHorizParams);
+                bottomLayoutHoriz.setOrientation(LinearLayout.VERTICAL);
 
-                    t_temp1 = new TextView(this);
-                    t_temp2 = new TextView(this);
-                    t_temp3 = new TextView(this);
-                    t_temp1.setLayoutParams(t_temp_params);
-                    t_temp2.setLayoutParams(t_temp_params);
-                    t_temp3.setLayoutParams(t_temp_params);
+                    txtView1 = new TextView(this);
+                    txtView2 = new TextView(this);
+                    txtView3 = new TextView(this);
+                    txtView1.setLayoutParams(t_temp_params);
+                    txtView2.setLayoutParams(t_temp_params);
+                    txtView3.setLayoutParams(t_temp_params);
 
-                b_temp = new Button(this);
-                b_temp.setLayoutParams(b_temp_params);
-                b_temp.setId(100 + indexcounter);
-                b_temp.setTag(indexcounter);
-                b_temp.setText("Reserve");
+                    button = new Button(this);
+                    button.setLayoutParams(buttonParams);
+                    button.setId(100 + i);
+                    button.setTag(i);
+                    button.setOnClickListener(listenerlist[i]);
+                    button.setText("Reserve");
 
             // First line | Brand - Type - Color - Drivetrain
-            t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getBrand());
-            t_temp1.setTypeface(null, Typeface.BOLD);
-            t_temp1.append(" - ");
-            t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getType());
-            t_temp1.append(" - ");
-            t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getColor());
-            t_temp1.append(" - ");
-            t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getDrivewheel());
+            txtView1.append(inventoryList.get(indextrackList.get(i)).getBrand());
+            txtView1.setTypeface(null, Typeface.BOLD);
+            txtView1.append(" - ");
+            txtView1.append(inventoryList.get(indextrackList.get(i)).getType());
+            txtView1.append(" - ");
+            txtView1.append(inventoryList.get(indextrackList.get(i)).getColor());
+            txtView1.append(" - ");
+            txtView1.append(inventoryList.get(indextrackList.get(i)).getDrivewheel());
 
             // Second line | Touch Screen - GPS - Ent. Sys. - Trailer Hookup
-            if (inventoryList.get(indextrackList.get(indexcounter)).getTouchscreen()) {
-                t_temp2.append(" - ");
-                t_temp2.append("Touch Screen");
+            if (inventoryList.get(indextrackList.get(i)).getTouchscreen()) {
+                txtView2.append(" * ");
+                txtView2.append("Touch Screen");
             }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getGPS()) {
-                t_temp2.append(" - ");
-                t_temp2.append("GPS");
+            if (inventoryList.get(indextrackList.get(i)).getGPS()) {
+                txtView2.append(" * ");
+                txtView2.append("GPS");
             }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getEntsys()) {
-                t_temp2.append(" - ");
-                t_temp2.append("Ent. Sys.");
+            if (inventoryList.get(indextrackList.get(i)).getEntsys()) {
+                txtView2.append(" * ");
+                txtView2.append("Ent. Sys.");
             }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getTrailer()) {
-                t_temp2.append(" - ");
-                t_temp2.append("Trailer Hookup");
+            if (inventoryList.get(indextrackList.get(i)).getTrailer()) {
+                txtView2.append(" * ");
+                txtView2.append("Trailer");
             }
 
             // Third line | Leather Seats - Heated Seats - Minibar - Jacuzzi
-            if (inventoryList.get(indextrackList.get(indexcounter)).getLeather()) {
+            if (inventoryList.get(indextrackList.get(i)).getLeather()) {
+                txtView3.append(" * ");
+                txtView3.append("Leather");
+            }
+            if (inventoryList.get(indextrackList.get(i)).getHeated()) {
+                txtView3.append(" * ");
+                txtView3.append("Heated Seats");
+            }
+            if (inventoryList.get(indextrackList.get(i)).getMinibar()) {
+                txtView3.append(" * ");
+                txtView3.append("Minibar");
 
-                t_temp2.append(" - ");
-                t_temp3.append("Leather");
             }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getHeated()) {
-                t_temp3.append(" - ");
-                t_temp3.append("Heated Seats");
+            if (inventoryList.get(indextrackList.get(i)).getJacuzzi()) {
+                txtView3.append(" * ");
+                txtView3.append("Jacuzzi");
             }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getMinibar()) {
-                t_temp3.append(" - ");
-                t_temp3.append("Minibar");
-
-            }
-            if (inventoryList.get(indextrackList.get(indexcounter)).getJacuzzi()) {
-                t_temp3.append(" - ");
-                t_temp3.append("Jacuzzi");
-            }
-
-            indexcounter++;
 
             // add the textviews and buttons to layouts
-            l2_temp.addView(t_temp1);
-            l2_temp.addView(t_temp2);
-            l2_temp.addView(t_temp3);
+            bottomLayoutHoriz.addView(txtView1);
+            bottomLayoutHoriz.addView(txtView2);
+            bottomLayoutHoriz.addView(txtView3);
 
-            textlist[i] = t_temp1;
-            textlist[i+1] = t_temp2;
-            textlist[i+2] = t_temp3;
             // ---------------------
-            l1_temp.addView(l2_temp);
-            l1_temp.addView(b_temp);
 
-            textgroup[i] = l2_temp;
-            btnlist[i] = b_temp;
+            topLayoutVert.addView(bottomLayoutHoriz);
+            topLayoutVert.addView(button);
+
+            btnlist[i] = button;
+
             // ---------------------
-            resultlist.addView(l1_temp);
 
-            //resultgroup[i] = l1_temp;
-
+            mainLayoutVert.addView(topLayoutVert);
 
         } // End of LOOP
 
-        /*
-        View.OnClickListener listener = new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
 
-                doAction(v.getTag());
-            }
-        };
-        */
+        // Listener LOOP
+        for (int i = 0; i < resultsize; i++) {
+
+            final int index = i;
+            listenerlist[i] = new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(Select.this,"TEST" + index, Toast.LENGTH_LONG).show();
+                }
+            };
+        }
+
+
+
+
+
+    } // END onCreate
+
+
+
+
+
+    /*
+    public void onClick(View v) {
+
+
+        Toast.makeText(Select.this,"TEST", Toast.LENGTH_SHORT).show();
 
     }
+
+     */
+
+
+
+
+
 
 }
