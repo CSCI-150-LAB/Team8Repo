@@ -35,7 +35,9 @@ public class Dashboard extends AppCompatActivity {
         btn_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "GO TO SHOPPING CART", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Dashboard.this, "GO TO SHOPPING CART", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Cart.class);
+                startActivity(intent);
             }
         });
         btn_settings.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +49,9 @@ public class Dashboard extends AppCompatActivity {
         btn_reservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "FIND YOUR RESERVED ORDER", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Dashboard.this, "FIND YOUR RESERVED ORDER", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Reservation.class);
+                startActivity(intent);
             }
         });
         btn_chat.setOnClickListener(new View.OnClickListener() {

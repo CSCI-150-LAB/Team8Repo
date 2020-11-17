@@ -3,6 +3,7 @@ package com.example.myapplication2;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -423,13 +424,6 @@ public class Select extends AppCompatActivity {
         ScrollView ScrollView = findViewById(R.id.ScrollView);
         LinearLayout resultlist = findViewById(R.id.resultlist);
 
-
-        //LinearLayout.LayoutParams resultgroup_param = new LinearLayout.LayoutParams(
-        //       LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-
-        //resultgroup_param.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        //resultgroup_param.setOrientation(LinearLayout.VERTICAL);
-
         LinearLayout[] resultgroup = new LinearLayout[resultsize];
         LinearLayout l1_temp;
         LinearLayout.LayoutParams l1_temp_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 300);
@@ -442,7 +436,6 @@ public class Select extends AppCompatActivity {
                 TextView t_temp1;
                 TextView t_temp2;
                 TextView t_temp3;
-                TextView t_temp4;
                 LinearLayout.LayoutParams t_temp_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
             Button[] btnlist = new Button[resultsize];
@@ -466,19 +459,19 @@ public class Select extends AppCompatActivity {
                     t_temp1 = new TextView(this);
                     t_temp2 = new TextView(this);
                     t_temp3 = new TextView(this);
-                    //t_temp4 = new TextView(this);
                     t_temp1.setLayoutParams(t_temp_params);
                     t_temp2.setLayoutParams(t_temp_params);
                     t_temp3.setLayoutParams(t_temp_params);
-                    //t_temp4.setLayoutParams(t_temp_params);
 
                 b_temp = new Button(this);
                 b_temp.setLayoutParams(b_temp_params);
-                //b_temp.setId(View.generateViewId());
+                b_temp.setId(100 + indexcounter);
+                b_temp.setTag(indexcounter);
                 b_temp.setText("Reserve");
 
             // First line | Brand - Type - Color - Drivetrain
             t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getBrand());
+            t_temp1.setTypeface(null, Typeface.BOLD);
             t_temp1.append(" - ");
             t_temp1.append(inventoryList.get(indextrackList.get(indexcounter)).getType());
             t_temp1.append(" - ");
@@ -524,21 +517,16 @@ public class Select extends AppCompatActivity {
                 t_temp3.append("Jacuzzi");
             }
 
-            // Fourth line | Separator
-            //t_temp4.append("----------------------------------------------------------------------------------");
-
             indexcounter++;
 
             // add the textviews and buttons to layouts
             l2_temp.addView(t_temp1);
             l2_temp.addView(t_temp2);
             l2_temp.addView(t_temp3);
-            //l2_temp.addView(t_temp4);
 
             textlist[i] = t_temp1;
             textlist[i+1] = t_temp2;
             textlist[i+2] = t_temp3;
-            //textlist[i+3] = t_temp4;
             // ---------------------
             l1_temp.addView(l2_temp);
             l1_temp.addView(b_temp);
@@ -553,6 +541,16 @@ public class Select extends AppCompatActivity {
 
         } // End of LOOP
 
+        /*
+        View.OnClickListener listener = new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                doAction(v.getTag());
+            }
+        };
+        */
 
     }
 
