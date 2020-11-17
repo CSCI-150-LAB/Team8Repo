@@ -115,7 +115,7 @@
         android:id="@+id/searchsubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:text="Search"
         android:textSize="18sp"
         android:textStyle="bold"

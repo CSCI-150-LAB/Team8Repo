@@ -59,7 +59,7 @@ public class Dashboard extends AppCompatActivity {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "GO TO SEARCH", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Dashboard.this, "GO TO SEARCH", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), Search.class);
                 startActivity(intent);
             }
@@ -76,7 +76,9 @@ public class Dashboard extends AppCompatActivity {
         btn_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "GO TO CALENDAR", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Dashboard.this, "GO TO CALENDAR", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Calendar.class);
+                startActivity(intent);
             }
         });
         btn_about.setOnClickListener(new View.OnClickListener() {
