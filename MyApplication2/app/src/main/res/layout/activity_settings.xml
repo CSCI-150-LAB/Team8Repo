@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.SwitchCompat
+        android:id = "@+id/carswitch_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text = "Notify for car offers at discount"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/carswitch_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Show user history of car purchases" />
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/carswitch_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Show user history of messages on chat" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/carswitch_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Send any constructive feedback" />
+
+</LinearLayout>
+
+
+
+
+
