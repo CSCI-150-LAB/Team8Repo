@@ -93,6 +93,7 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="carbrand_filter">
+        <item></item>
         <item>Audi</item>
         <item>BMW</item>
         <item>Chevy</item>
@@ -111,6 +112,7 @@
     </string-array>
 
     <string-array name="cartype_filter">
+        <item></item>
         <item>Coupe</item>
         <item>Hatchback</item>
         <item>Luxury</item>
@@ -122,6 +124,7 @@
     </string-array>
 
     <string-array name="carcolor_filter">
+        <item></item>
         <item>Black</item>
         <item>Blue</item>
         <item>Brown</item>
@@ -135,10 +138,10 @@
     </string-array>
 
     <string-array name="drivewheel_filter">
+        <item></item>
         <item>All Wheel</item>
         <item>Front Wheel</item>
         <item>Rear Wheel</item>
     </string-array>
-
 
 </resources>

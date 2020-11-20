@@ -9,44 +9,61 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calendar"></activity>
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".DealerSignUp" />
-        <activity android:name=".DealerLogin" />
-        <activity android:name=".DealerDashBoard" />
-        <activity android:name=".Login" />
-        <activity android:name=".ResetPassword" />
-        <activity android:name=".EditProfile" />
-        <activity android:name=".Userprofile" />
-        <activity android:name=".Dashboard" />
         <activity
-            android:name=".Search"
+            android:name=".Reservation"
             android:parentActivityName=".Dashboard">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Dashboard" />
-        </activity>
+        </activity> <!-- ============================================================================= -->
+        <activity
+            android:name=".Cart"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity> <!-- ============================================================================= -->
+        <activity android:name=".Home" /> <!-- ============================================================================= -->
+        <activity android:name=".Register" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerSignUp" /> <!-- ============================================================================= -->
+        <activity android:name=".AdminSignUp" /> <!-- ============================================================================= -->
+        <activity android:name=".Login" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerLogin" /> <!-- ============================================================================= -->
+        <activity android:name=".AdminLogin" /> <!-- ============================================================================= -->
+        <activity android:name=".ForgotPassword" /> <!-- ============================================================================= -->
+        <activity android:name=".Dashboard">
+            <!-- ___________ STARTING ACTIVITY CODE ___________ -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- ______________________________________________ -->
+        </activity> <!-- ============================================================================= -->
+        <activity android:name=".DealerDashBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".AdminBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".Userprofile" /> <!-- ============================================================================= -->
+        <activity android:name=".EditProfile" /> <!-- ============================================================================= -->
+        <activity android:name=".ResetPassword" /> <!-- ============================================================================= -->
+        <activity
+            android:name=".Search"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity> <!-- ============================================================================= -->
         <activity
             android:name=".Select"
             android:parentActivityName=".Search">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Search" />
-        </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".AdminLogin" />
-        <activity android:name=".AdminBoard" />
-        <activity android:name=".AdminSignUp" />
-        <activity android:name=".Home">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity> <!-- ============================================================================= -->
+        <activity
+            android:name=".Calendar"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
         </activity>
     </application>
 
