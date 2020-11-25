@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D816D5"
     android:orientation="vertical"
-    android:background = "@color/purple_700"
     tools:context=".AbouUs">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation = "vertical">
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity = "center_horizontal"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="#1E1D1D"
             app:cardCornerRadius="20dp">
+
             <TextView
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:fontFamily="sans-serif-black"
                 android:padding="12dp"
                 android:text="MyCarApp"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textSize="28dp"
                 android:textStyle="bold" />
 
@@ -32,17 +35,17 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id = "@+id/text"
+            android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="101dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:padding="8dp"
             android:text="MyCar is a web/mobile based software application that allows a customer to securely log in and rent a vehicle directly from a dealership based on their personal preferences for the purpose of entertainment and/or transportation. To do this app, Team 8 used Android Studio 4.1.0, using Java code and XML code. To contact us, phone us, email us or follow us on social media like Twitter, Facebook, Instagram, etc."
-            android:textColor="@color/white"
+            android:textColor="#FFFFFF"
             android:textSize="12dp" />
 
         <ImageView
-            android:id = "@+id/action_image"
+            android:id="@+id/action_image"
             android:layout_width="match_parent"
             android:layout_height="132dp"
             android:src="@drawable/carrenticon" />
