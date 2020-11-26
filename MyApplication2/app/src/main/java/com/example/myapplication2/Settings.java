@@ -1,4 +1,4 @@
-package com.example.settings;
+package com.example.myapplication2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;

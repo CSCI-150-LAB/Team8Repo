@@ -44,6 +44,8 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Dashboard.this, "GO TO SETTINGS", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Settings.class);
+                startActivity(intent);
             }
         });
         btn_reservation.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +91,8 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Dashboard.this, "LEARN ABOUT US", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, AbouUs.class);
+                startActivity(intent);
             }
         });
         btn_profile.setOnClickListener(new View.OnClickListener() {

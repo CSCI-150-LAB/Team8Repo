@@ -23,7 +23,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Dashboard" />
         </activity> <!-- ============================================================================= -->
-        <activity android:name=".Home" /> <!-- ============================================================================= -->
+        <activity android:name=".Dashboard" /> <!-- ============================================================================= -->
         <activity android:name=".Register" /> <!-- ============================================================================= -->
         <activity android:name=".DealerSignUp" /> <!-- ============================================================================= -->
         <activity android:name=".AdminSignUp" /> <!-- ============================================================================= -->
@@ -31,7 +31,9 @@
         <activity android:name=".DealerLogin" /> <!-- ============================================================================= -->
         <activity android:name=".AdminLogin" /> <!-- ============================================================================= -->
         <activity android:name=".ForgotPassword" /> <!-- ============================================================================= -->
-        <activity android:name=".Dashboard">
+        <activity android:name=".Settings" />
+        <activity android:name=".AbouUs" />
+        <activity android:name=".Home">
             <!-- ___________ STARTING ACTIVITY CODE ___________ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
