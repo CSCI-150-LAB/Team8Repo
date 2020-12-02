@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Contact Page"
+        android:id = "@+id/title"
+        android:gravity = "center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background = "@color/white"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/DealerX1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:text="Dealer Ashley" />
+
+    <TextView
+        android:id = "@+id/DealerX1address"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/DealerX1"
+        android:layout_marginTop="10dp"
+        android:text="Street Address: 4125 Empis St, Woodland Hills, CA 99910" />
+
+    <Button
+        android:id="@+id/btn_DealerX"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/white"
+        android:text="Contact US"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DealerY1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_DealerX"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:text="Dealer Jason" />
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/DealerY1"
+        android:id = "@+id/DealerY1address"
+        android:layout_marginTop="10dp"
+        android:text="Street Address: 2512 Silver Ridge Ave, Los Angeles, CA 90039 " />
+
+    <Button
+        android:id="@+id/btn_DealerY"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DealerY1address"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/white"
+        android:text="Contact US"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/AdminA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_DealerY"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:text="Admin Bryant" />
+
+    <TextView
+        android:id="@+id/AdminA1address"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/AdminA1"
+        android:layout_marginTop="4dp"
+        android:text="Street Address: 6326 Alonzo Ave, Encino, CA 91316 " />
+
+    <Button
+        android:id="@+id/btn_AdminA"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AdminA1address"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/white"
+        android:text="Contact US"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/AdminB1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_AdminA"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:text="Admin Helen" />
+
+    <TextView
+        android:id="@+id/AdminB1address"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/AdminB1"
+        android:layout_marginTop="4dp"
+        android:text="Street Address: 13691 Kelowna St, Arleta, CA 91331 " />
+
+    <Button
+        android:id="@+id/btn_AdminB"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AdminB1address"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/white"
+        android:text="Contact US"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+</RelativeLayout>
