@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AbouUs extends AppCompatActivity {
+public class AboutUs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

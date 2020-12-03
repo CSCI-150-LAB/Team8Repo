@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class AdminModUser extends AppCompatActivity {
     EditText username, email;
     TextView textView;
-    com.example.mycar.DB_Controller controller;
+    DB_Controller controller;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public class AdminModUser extends AppCompatActivity {
         username = (EditText)findViewById(R.id.username_input);
         email = (EditText)findViewById(R.id.email_input);
         textView = (TextView) findViewById(R.id.textView);
-        controller = new com.example.mycar.DB_Controller(this, "", null, 1);
+        controller = new DB_Controller(this, "", null, 1);
 
     }
     public void btn_click(View view) {

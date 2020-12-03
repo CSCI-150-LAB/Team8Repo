@@ -1,4 +1,4 @@
-package com.example.myapplication43;
+package com.example.mycar;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_update:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("ENTER NEW USERNAME");
-                EditText new_username = new EditText(this);
+                final EditText new_username = new EditText(this);
                 dialog.setView(new_username);
                 dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
