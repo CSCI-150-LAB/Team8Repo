@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mycar">
 
     <application
@@ -11,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.example.mycar.Reservation"
-            android:parentActivityName="com.example.mycar.Dashboard">
+            android:parentActivityName="com.example.mycar.Dashboard"
+            tools:ignore="MissingClass">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
@@ -37,7 +39,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
         </activity>
-        <activity android:name="com.example.mycar.AbouUs"
+        <activity android:name="com.example.mycar.AboutUs"
             android:parentActivityName="com.example.mycar.Dashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -49,6 +51,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.AdminBoard" />
         </activity>
+        <activity android:name=".AdminModFee" />
         <activity android:name="com.example.mycar.Home">
             <!-- ___________ STARTING ACTIVITY CODE ___________ -->
             <intent-filter>

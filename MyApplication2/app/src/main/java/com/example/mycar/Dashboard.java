@@ -91,7 +91,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Dashboard.this, "LEARN ABOUT US", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Dashboard.this, AbouUs.class);
+                Intent intent = new Intent(Dashboard.this, AboutUs.class);
                 startActivity(intent);
             }
         });
