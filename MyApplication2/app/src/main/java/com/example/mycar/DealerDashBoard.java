@@ -48,6 +48,7 @@ public class DealerDashBoard extends AppCompatActivity {
                 mAuth.signOut();
                 Intent DealerLogOut = new Intent(DealerDashBoard.this, DealerLogin.class);
                 startActivity(DealerLogOut);
+                finish();
             }
         });
         btn_dealericon.setOnClickListener(new View.OnClickListener() {

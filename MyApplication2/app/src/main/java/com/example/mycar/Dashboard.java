@@ -79,6 +79,7 @@ public class Dashboard extends AppCompatActivity {
                 mAuth.signOut();
                 Intent UserLogout = new Intent(Dashboard.this, Login.class);
                 startActivity(UserLogout);
+                finish();
             }
         });
         btn_calendar.setOnClickListener(new View.OnClickListener() {

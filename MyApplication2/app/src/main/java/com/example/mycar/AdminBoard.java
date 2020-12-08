@@ -48,6 +48,7 @@ public class AdminBoard extends AppCompatActivity {
                 mAuth.signOut();
                 Intent AdminOut = new Intent(AdminBoard.this, AdminLogin.class);
                 startActivity(AdminOut);
+                finish();
             }
         });
     }
