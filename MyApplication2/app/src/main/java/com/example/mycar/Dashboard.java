@@ -79,6 +79,7 @@ public class Dashboard extends AppCompatActivity {
                 mAuth.signOut();
                 Intent UserLogout = new Intent(Dashboard.this, Login.class);
                 startActivity(UserLogout);
+                finish();
             }
         });
         btn_calendar.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +98,7 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,6 +108,7 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(cus2Profile);
             }
         });
+
 
     }
 }
