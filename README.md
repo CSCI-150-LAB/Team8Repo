@@ -2,10 +2,12 @@
 
 # Project Team 
 Project Lead: AJ Pongress
+
 Project Members: Madhuri Pyreddy, Chang Thao, Bryant Paolomo
 
 # Project Timeline 
 Project Start Date: 9/22/20
+
 Project Completion Date (Hopefully) : 12/10/20
 
 # Project Description: 
