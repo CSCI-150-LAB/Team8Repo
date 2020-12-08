@@ -44,7 +44,13 @@
         <activity android:name=".AdminSignUp" /> <!-- ============================================================================= -->
         <activity android:name=".Login" /> <!-- ============================================================================= -->
         <activity android:name=".DealerLogin" /> <!-- ============================================================================= -->
-        <activity android:name=".DealerReservation" />
+        <activity
+            android:name=".DealerReservation"
+            android:parentActivityName=".DealerDashBoard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.DealerDashBoard" />
+        </activity>
         <activity android:name=".AdminLogin" /> <!-- ============================================================================= -->
         <activity android:name=".ForgotPassword" /> <!-- ============================================================================= -->
         <activity

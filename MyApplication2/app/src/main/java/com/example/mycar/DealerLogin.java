@@ -52,6 +52,7 @@ public class DealerLogin extends AppCompatActivity {
                             Toast.makeText(DealerLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(DealerLogin.this, DealerDashBoard.class);
                             startActivity(intent);
+                            finish();
                         }
                         else{
                             Toast.makeText(DealerLogin.this, "Login Fail", Toast.LENGTH_SHORT).show();
