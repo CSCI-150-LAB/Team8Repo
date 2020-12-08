@@ -3,8 +3,8 @@
 Project Lead: AJ Pongress
 
 Project Members: 
-Madhuri Pyreddy
-Chang Thao
+Madhuri Pyreddy,
+Chang Thao,
 Bryant Paolomo
 
 Project Start Date: 9/22/20
