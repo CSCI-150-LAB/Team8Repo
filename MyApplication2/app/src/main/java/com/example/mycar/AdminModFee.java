@@ -53,7 +53,7 @@ public class AdminModFee extends AppCompatActivity {
                 final ArrayAdapter adapter = new ArrayAdapter<String>(AdminModFee.this, R.layout.list_item, list);
                 listView.setAdapter(adapter);
                 try {
-                    DatabaseReference referenceDealer = FirebaseDatabase.getInstance().getReference().child("Dealers").child(et_itemSearch.getText().toString());
+                    DatabaseReference referenceDealer = FirebaseDatabase.getInstance().getReference().child("Inventory").child(et_itemSearch.getText().toString());
                     referenceDealer.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
