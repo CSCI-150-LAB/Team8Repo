@@ -20,9 +20,6 @@ public class EditProfile extends AppCompatActivity {
     Button EditDone;
     EditText EditName, EditEmail, EditDOB, EditPhone;
     String Name,Email,Phone,DOB;
-    //private FirebaseDatabase database;
-    //private DatabaseReference myRef;
-    //private FirebaseUser UserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +54,7 @@ public class EditProfile extends AppCompatActivity {
                                 Toast.makeText(EditProfile.this, "Data save successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditProfile.this, Userprofile.class);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 Toast.makeText(EditProfile.this, "Data fail to save", Toast.LENGTH_SHORT).show();
                             }
@@ -83,6 +81,7 @@ public class EditProfile extends AppCompatActivity {
                                 Toast.makeText(EditProfile.this, "Data save successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditProfile.this, Userprofile.class);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 Toast.makeText(EditProfile.this, "Data fail to save", Toast.LENGTH_SHORT).show();
                             }
