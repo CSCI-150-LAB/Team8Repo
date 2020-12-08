@@ -30,7 +30,9 @@ public class DealerDashBoard extends AppCompatActivity {
         btn_inventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DealerDashBoard.this, "GO TO INVENTORY", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DealerDashBoard.this, "GO TO INVENTORY", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DealerDashBoard.this, Dealer_Invent.class);
+                startActivity(intent);
             }
         });
         btn_search.setOnClickListener(new View.OnClickListener() {
@@ -42,16 +44,17 @@ public class DealerDashBoard extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DealerDashBoard.this, "SIGN OUT", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DealerDashBoard.this, "SIGN OUT", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
                 Intent DealerLogOut = new Intent(DealerDashBoard.this, DealerLogin.class);
                 startActivity(DealerLogOut);
+                finish();
             }
         });
         btn_dealericon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DealerDashBoard.this, "GO TO PROFILE", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DealerDashBoard.this, "GO TO PROFILE", Toast.LENGTH_SHORT).show();
                 Intent Dealer2Profile = new Intent(DealerDashBoard.this, Userprofile.class);
                 Dealer2Profile.putExtra("Profile","Dealer");
                 startActivity(Dealer2Profile);
@@ -60,7 +63,9 @@ public class DealerDashBoard extends AppCompatActivity {
         btn_reservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DealerDashBoard.this, "GO TO RESERVATION", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DealerDashBoard.this, "GO TO RESERVATION", Toast.LENGTH_SHORT).show();
+                Intent dealerReserve = new Intent (DealerDashBoard.this, DealerReservation.class);
+                startActivity(dealerReserve);
             }
         });
 

@@ -45,20 +45,23 @@ public class DealerLogin extends AppCompatActivity {
             public void onClick(View v) {
                 String DUser = DealerUsername.getText().toString();
                 String DPass = DealerPassword.getText().toString();
-                mAuth.signInWithEmailAndPassword(DUser, DPass).addOnCompleteListener(DealerLogin.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(DealerLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(DealerLogin.this, DealerDashBoard.class);
-                            startActivity(intent);
-                        }
-                        else{
-                            Toast.makeText(DealerLogin.this, "Login Fail", Toast.LENGTH_SHORT).show();
+                try {
+                    mAuth.signInWithEmailAndPassword(DUser, DPass).addOnCompleteListener(DealerLogin.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(DealerLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(DealerLogin.this, DealerDashBoard.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(DealerLogin.this, "Login Fail", Toast.LENGTH_SHORT).show();
 
+                            }
                         }
-                    }
-                });
+                    });
+                }
+                catch (Exception e) {}
             }
         });
 

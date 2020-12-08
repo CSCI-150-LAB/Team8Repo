@@ -10,103 +10,110 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DealerAddCar"
+            android:parentActivityName=".Dealer_Invent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Dealer_Invent" />
+        </activity>
         <activity
-            android:name="com.example.mycar.Reservation"
-            android:parentActivityName="com.example.mycar.Dashboard"
+            android:name=".Dealer_Invent"
+            android:parentActivityName=".DealerDashBoard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.DealerDashBoard" />
+        </activity>
+        <activity
+            android:name=".Reservation"
+            android:parentActivityName=".Dashboard"
             tools:ignore="MissingClass">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
-
+        </activity> <!-- ============================================================================= -->
+        <activity
+            android:name=".Cart"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Dashboard" />
+        </activity> <!-- ============================================================================= -->
+        <activity android:name=".Dashboard" /> <!-- ============================================================================= -->
+        <activity android:name=".Register" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerSignUp" /> <!-- ============================================================================= -->
+        <activity android:name=".AdminSignUp" /> <!-- ============================================================================= -->
+        <activity android:name=".Login" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerLogin" /> <!-- ============================================================================= -->
+        <activity
+            android:name=".DealerReservation"
+            android:parentActivityName=".DealerDashBoard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.DealerDashBoard" />
+        </activity>
+        <activity android:name=".AdminLogin" /> <!-- ============================================================================= -->
+        <activity android:name=".ForgotPassword" /> <!-- ============================================================================= -->
+        <activity
+            android:name=".Contact_Us"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Dashboard" />
         </activity>
         <activity
-            android:name="com.example.mycar.Cart"
-            android:parentActivityName="com.example.mycar.Search">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Search" />
-        </activity>
-        <activity android:name="com.example.mycar.Dashboard" >
-
-        </activity>
-
-        <activity android:name="com.example.mycar.Register" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.DealerSignUp" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.AdminSignUp" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.Login"
-            android:parentActivityName="com.example.mycar.Home">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Home" />
-        </activity>
-        <activity android:name="com.example.mycar.DealerLogin"
-            android:parentActivityName="com.example.mycar.Home">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Home" />
-        </activity>
-        <activity android:name="com.example.mycar.AdminLogin"
-            android:parentActivityName="com.example.mycar.Home">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Home" />
-        </activity>
-        <activity android:name="com.example.mycar.ForgotPassword" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.Settings"
-            android:parentActivityName="com.example.mycar.Dashboard">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Dashboard" />
-
-        </activity>
-        <activity android:name="com.example.mycar.AboutUs"
-            android:parentActivityName="com.example.mycar.Dashboard">
+            android:name=".Settings"
+            android:parentActivityName=".Dashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
         </activity>
-        <activity android:name=".AdminModUser"
-            android:parentActivityName="com.example.mycar.AdminBoard">
+        <activity
+            android:name=".AboutUs"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Dashboard" />
+        </activity>
+        <activity
+            android:name=".AdminModUser"
+            android:parentActivityName=".AdminBoard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.AdminBoard" />
         </activity>
         <activity android:name=".AdminModFee" />
-        <activity android:name="com.example.mycar.Home">
+        <activity android:name=".Home">
+
             <!-- ___________ STARTING ACTIVITY CODE ___________ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!-- ______________________________________________ -->
-        </activity>
-        <activity android:name="com.example.mycar.DealerDashBoard" >
-
-        </activity>
-        <activity android:name="com.example.mycar.AdminBoard" >
-
-        </activity>
-        <activity android:name="com.example.mycar.Userprofile" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.EditProfile" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.ResetPassword" /> <!-- ============================================================================= -->
+        </activity> <!-- ============================================================================= -->
+        <activity android:name=".DealerDashBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".AdminBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".Userprofile" /> <!-- ============================================================================= -->
+        <activity android:name=".EditProfile" /> <!-- ============================================================================= -->
+        <activity android:name=".ResetPassword" /> <!-- ============================================================================= -->
         <activity
-            android:name="com.example.mycar.Search"
-            android:parentActivityName="com.example.mycar.Dashboard">
+            android:name=".Search"
+            android:parentActivityName=".Dashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
-
-        </activity>
+        </activity> <!-- ============================================================================= -->
         <activity
-            android:name="com.example.mycar.Select"
-            android:parentActivityName="com.example.mycar.Search">
+            android:name=".Select"
+            android:parentActivityName=".Search">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Search" />
-        </activity>
+        </activity> <!-- ============================================================================= -->
         <activity
-            android:name="com.example.mycar.Calendar"
-            android:parentActivityName="com.example.mycar.Dashboard">
+            android:name=".Calendar"
+            android:parentActivityName=".Dashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />

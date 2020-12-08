@@ -66,6 +66,7 @@ public class Register extends AppCompatActivity {
                                         if(task.isSuccessful()){
                                             Intent goLogin = new Intent(Register.this, Login.class);
                                             startActivity(goLogin);
+                                            finish();
                                         }
                                         else{
                                             Toast.makeText(Register.this, "Data Registration Unsuccessful", Toast.LENGTH_SHORT).show();

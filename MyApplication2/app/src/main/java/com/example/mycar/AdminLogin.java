@@ -76,18 +76,21 @@ public class AdminLogin extends AppCompatActivity {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(AdminLogin.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(AdminLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                    //login placeholder
-                    //
-                    Intent dash = new Intent(getApplicationContext(), AdminBoard.class);
-                    startActivity(dash);
-                    //
-                    //placeholder
-                    finish();
-                } else {
-                    Toast.makeText(AdminLogin.this, "Login failed!", Toast.LENGTH_SHORT).show();
+                try {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(AdminLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                        //login placeholder
+                        //
+                        Intent dash = new Intent(getApplicationContext(), AdminBoard.class);
+                        startActivity(dash);
+                        //
+                        //placeholder
+                        finish();
+                    } else {
+                        Toast.makeText(AdminLogin.this, "Login failed!", Toast.LENGTH_SHORT).show();
+                    }
                 }
+                catch (Exception e) {}
             }
         });
     }

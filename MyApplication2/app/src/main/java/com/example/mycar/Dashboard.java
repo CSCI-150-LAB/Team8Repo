@@ -59,7 +59,9 @@ public class Dashboard extends AppCompatActivity {
         btn_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "CHAT WITH US", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Dashboard.this, "Contact Us", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Contact_Us.class);
+                startActivity(intent);
             }
         });
         btn_search.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +79,7 @@ public class Dashboard extends AppCompatActivity {
                 mAuth.signOut();
                 Intent UserLogout = new Intent(Dashboard.this, Login.class);
                 startActivity(UserLogout);
+                finish();
             }
         });
         btn_calendar.setOnClickListener(new View.OnClickListener() {
