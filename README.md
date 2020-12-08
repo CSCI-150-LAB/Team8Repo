@@ -1,12 +1,8 @@
 # Team8Repo
 
-# Project Lead: 
-AJ Pongress
-
-# Project Members: 
-Madhuri Pyreddy,
-Chang Thao,
-Bryant Paolomo
+# Project Team 
+Project Lead: AJ Pongress
+Project Members: Madhuri Pyreddy, Chang Thao, Bryant Paolomo
 
 # Project Timeline 
 Project Start Date: 9/22/20
