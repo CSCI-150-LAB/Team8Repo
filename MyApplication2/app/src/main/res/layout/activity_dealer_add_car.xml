@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DealerAddCar">
+
+    <TextView
+        android:id="@+id/CarBrand"
+        android:layout_width="44dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        android:text="Brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/BrandValue"
+        android:layout_width="84dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Toyota"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarBrand"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/CarColor"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:text="Color "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarBrand" />
+
+    <EditText
+        android:id="@+id/ColorValue"
+        android:layout_width="73dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Red"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarColor"
+        app:layout_constraintTop_toBottomOf="@+id/BrandValue"
+        tools:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/CarWheel"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:text="Drivewheel "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarColor" />
+
+    <EditText
+        android:id="@+id/WheelValue"
+        android:layout_width="92dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Front Wheel"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarWheel"
+        app:layout_constraintTop_toBottomOf="@+id/ColorValue" />
+
+    <TextView
+        android:id="@+id/CarEntsys"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:text="Entsys "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarWheel" />
+
+    <EditText
+        android:id="@+id/EntsysValue"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="false"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarEntsys"
+        app:layout_constraintTop_toBottomOf="@+id/WheelValue" />
+
+    <TextView
+        android:id="@+id/CarFee"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:text="Fee  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarEntsys" />
+
+    <EditText
+        android:id="@+id/FeeValue"
+        android:layout_width="55dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="50"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toEndOf="@+id/CarFee"
+        app:layout_constraintTop_toBottomOf="@+id/EntsysValue" />
+
+    <TextView
+        android:id="@+id/CarGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="GPS  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarFee" />
+
+    <EditText
+        android:id="@+id/GPSValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="true"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toEndOf="@+id/CarGPS"
+        app:layout_constraintTop_toBottomOf="@+id/FeeValue" />
+
+    <TextView
+        android:id="@+id/CarHeated"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:text="Heated "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarGPS" />
+
+    <EditText
+        android:id="@+id/HeatedValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="true"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarHeated"
+        app:layout_constraintTop_toBottomOf="@+id/GPSValue" />
+
+    <TextView
+        android:id="@+id/CarJacuzzi"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        android:text="Jacuzzi "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/BrandValue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/JacuzziValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="false"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/CarJacuzzi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CarLeader"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:text="Leather "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toEndOf="@+id/ColorValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarJacuzzi" />
+
+    <EditText
+        android:id="@+id/LeatherValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="true"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/CarLeader"
+        app:layout_constraintTop_toBottomOf="@+id/JacuzziValue" />
+
+    <TextView
+        android:id="@+id/CarMinibar"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:text="MiniBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toEndOf="@+id/WheelValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarLeader" />
+
+    <EditText
+        android:id="@+id/MiniBarValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="false"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/CarMinibar"
+        app:layout_constraintTop_toBottomOf="@+id/LeatherValue" />
+
+    <TextView
+        android:id="@+id/CarQty"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:text="Qty "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/EntsysValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarMinibar" />
+
+    <EditText
+        android:id="@+id/QtyValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="3"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarQty"
+        app:layout_constraintTop_toBottomOf="@+id/MiniBarValue" />
+
+    <TextView
+        android:id="@+id/CarTScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:text="TouchScreen "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toEndOf="@+id/FeeValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarQty" />
+
+    <EditText
+        android:id="@+id/TScreenValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="true"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CarTScreen"
+        app:layout_constraintTop_toBottomOf="@+id/QtyValue" />
+
+    <TextView
+        android:id="@+id/CarTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:text="Trailer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/GPSValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarTScreen" />
+
+    <EditText
+        android:id="@+id/TrailerValue"
+        android:layout_width="50dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="false"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toEndOf="@+id/CarTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/TScreenValue" />
+
+    <TextView
+        android:id="@+id/CarType"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:text="Type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toEndOf="@+id/HeatedValue"
+        app:layout_constraintTop_toBottomOf="@+id/CarTrailer" />
+
+    <EditText
+        android:id="@+id/TypeValue"
+        android:layout_width="70dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Coupe"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toEndOf="@+id/CarType"
+        app:layout_constraintTop_toBottomOf="@+id/TrailerValue" />
+
+    <Button
+        android:id="@+id/CarAddBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CarType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,6 +31,8 @@ public class DealerDashBoard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(DealerDashBoard.this, "GO TO INVENTORY", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DealerDashBoard.this, Dealer_Invent.class);
+                startActivity(intent);
             }
         });
         btn_search.setOnClickListener(new View.OnClickListener() {
