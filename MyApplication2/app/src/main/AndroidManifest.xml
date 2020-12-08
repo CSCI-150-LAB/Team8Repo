@@ -15,7 +15,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dealer_Invent" />
-    </activity>
+        </activity>
         <activity
             android:name=".Dealer_Invent"
             android:parentActivityName=".DealerDashBoard">
@@ -38,14 +38,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
         </activity> <!-- ============================================================================= -->
-        <activity android:name=".Dashboard" /> <!-- ============================================================================= -->
+        <activity android:name=".Dashboard" >
+
+        </activity>
         <activity android:name=".Register" /> <!-- ============================================================================= -->
-        <activity android:name=".DealerSignUp"
-            android:parentActivityName=".DealerDashBoard">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.DealerDashBoard" />
-        </activity> <!-- ============================================================================= -->
+        <activity android:name=".DealerSignUp" /> <!-- ============================================================================= -->
         <activity android:name=".AdminSignUp" /> <!-- ============================================================================= -->
         <activity android:name=".Login" /> <!-- ============================================================================= -->
         <activity android:name=".DealerLogin" /> <!-- ============================================================================= -->
@@ -93,17 +90,21 @@
                 android:value="com.example.mycar.AdminBoard" />
         </activity>
         <activity android:name=".Home">
-
             <!-- ___________ STARTING ACTIVITY CODE ___________ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- ______________________________________________ -->
+            <!-- ___________ STARTING ACTIVITY CODE ___________ -->
+
         </activity> <!-- ============================================================================= -->
-        <activity android:name=".DealerDashBoard" /> <!-- ============================================================================= -->
-        <activity android:name=".AdminBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerDashBoard" >
+
+        </activity>
+        <activity android:name=".AdminBoard" >
+
+        </activity>
         <activity android:name=".Userprofile" /> <!-- ============================================================================= -->
         <activity android:name=".EditProfile" /> <!-- ============================================================================= -->
         <activity android:name=".ResetPassword" /> <!-- ============================================================================= -->

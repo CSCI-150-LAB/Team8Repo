@@ -98,6 +98,7 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +108,7 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(cus2Profile);
             }
         });
+
 
     }
 }

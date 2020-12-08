@@ -3,6 +3,7 @@ package com.example.mycar;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,27 +15,29 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-//public class Select implements Car extends AppCompatActivity
 public class Select extends AppCompatActivity {
-
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        // Re-create inventory ArrayList
-        ArrayList<Car> inventoryList = (ArrayList<Car>) getIntent().getSerializableExtra("inventoryList");
+        // Gobals
+        Inventory masterinventory = new Inventory();
+        //Indextracker masterindextracker = new Indextracker();
+
+        ArrayList<Car> inventory = masterinventory.exportInventory();
+        //ArrayList<Integer> indextrack = masterindextracker.exportIndex();
+
+        final Globals masterglobals = new Globals();
 
         // Re-create indextracker Arraylist
-        ArrayList<Integer> indextrackList = (ArrayList<Integer>) getIntent().getSerializableExtra("indextrackList");
+        final ArrayList<Integer> indextrack = (ArrayList<Integer>) getIntent().getSerializableExtra("indextrack");
 
         // Dynamic generation of results
-
-        int resultsize = indextrackList.size();
+        int resultsize = indextrack.size();
 
         LinearLayout mainLayoutVert = findViewById(R.id.resultlist);
 
@@ -55,17 +58,34 @@ public class Select extends AppCompatActivity {
 
         View.OnClickListener[] listenerlist = new View.OnClickListener[resultsize];
 
+        //boolean populated = true;
+        //masterglobals.setPopulated(populated);
+
         // Listener LOOP
         for (int i = 0; i < resultsize; i++) {
 
-            final int index = i;
+            final int chosenIndex = indextrack.get(i);
+
             listenerlist[i] = new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(Select.this,"TEST" + index, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Select.this, Cart.class);
 
+                    // Pass inventory ArrayList
+                    //intent.putExtra("inventory", inventory);
+
+                    // Pass indextracker Arraylist
+                    intent.putExtra("indextrack", indextrack);
+
+                    // Pass chosen index of indextrack
+                    intent.putExtra("chosenIndex", chosenIndex);
+
+                    // Pass boolean populated value
+                    //intent.putExtra("populated", populated);
+
+                    startActivity(intent);
                 }
             };
         }
@@ -97,50 +117,50 @@ public class Select extends AppCompatActivity {
                     button.setText("Reserve");
 
             // First line | Brand - Type - Color - Drivetrain
-            txtView1.append(inventoryList.get(indextrackList.get(i)).getBrand());
+            txtView1.append(inventory.get(indextrack.get(i)).getBrand());
             txtView1.setTypeface(null, Typeface.BOLD);
             txtView1.append(" - ");
-            txtView1.append(inventoryList.get(indextrackList.get(i)).getType());
+            txtView1.append(inventory.get(indextrack.get(i)).getType());
             txtView1.append(" - ");
-            txtView1.append(inventoryList.get(indextrackList.get(i)).getColor());
+            txtView1.append(inventory.get(indextrack.get(i)).getColor());
             txtView1.append(" - ");
-            txtView1.append(inventoryList.get(indextrackList.get(i)).getDrivewheel());
+            txtView1.append(inventory.get(indextrack.get(i)).getDrivewheel());
 
             // Second line | Touch Screen - GPS - Ent. Sys. - Trailer Hookup
-            if (inventoryList.get(indextrackList.get(i)).getTouchscreen()) {
-                txtView2.append(" * ");
-                txtView2.append("Touch Screen");
+            if (inventory.get(indextrack.get(i)).getTouchscreen()) {
+                //txtView2.append(" * ");
+                txtView2.append("* Touch Screen ");
             }
-            if (inventoryList.get(indextrackList.get(i)).getGPS()) {
-                txtView2.append(" * ");
-                txtView2.append("GPS");
+            if (inventory.get(indextrack.get(i)).getGPS()) {
+                //txtView2.append(" * ");
+                txtView2.append("* GPS ");
             }
-            if (inventoryList.get(indextrackList.get(i)).getEntsys()) {
-                txtView2.append(" * ");
-                txtView2.append("Ent. Sys.");
+            if (inventory.get(indextrack.get(i)).getEntsys()) {
+                //txtView2.append(" * ");
+                txtView2.append("* Ent. Sys. ");
             }
-            if (inventoryList.get(indextrackList.get(i)).getTrailer()) {
-                txtView2.append(" * ");
-                txtView2.append("Trailer");
+            if (inventory.get(indextrack.get(i)).getTrailer()) {
+                //txtView2.append(" * ");
+                txtView2.append("* Trailer ");
             }
 
             // Third line | Leather Seats - Heated Seats - Minibar - Jacuzzi
-            if (inventoryList.get(indextrackList.get(i)).getLeather()) {
-                txtView3.append(" * ");
-                txtView3.append("Leather");
+            if (inventory.get(indextrack.get(i)).getLeather()) {
+                //txtView3.append(" * ");
+                txtView3.append("* Leather ");
             }
-            if (inventoryList.get(indextrackList.get(i)).getHeated()) {
-                txtView3.append(" * ");
-                txtView3.append("Heated Seats");
+            if (inventory.get(indextrack.get(i)).getHeated()) {
+                //txtView3.append(" * ");
+                txtView3.append("* Heated Seats ");
             }
-            if (inventoryList.get(indextrackList.get(i)).getMinibar()) {
-                txtView3.append(" * ");
-                txtView3.append("Minibar");
+            if (inventory.get(indextrack.get(i)).getMinibar()) {
+                //txtView3.append(" * ");
+                txtView3.append("* Minibar ");
 
             }
-            if (inventoryList.get(indextrackList.get(i)).getJacuzzi()) {
-                txtView3.append(" * ");
-                txtView3.append("Jacuzzi");
+            if (inventory.get(indextrack.get(i)).getJacuzzi()) {
+                //txtView3.append(" * ");
+                txtView3.append("* Jacuzzi ");
             }
 
             // add the textviews and buttons to layouts
@@ -162,5 +182,5 @@ public class Select extends AppCompatActivity {
         } // End of LOOP
 
     } // END onCreate
-    
+
 }
