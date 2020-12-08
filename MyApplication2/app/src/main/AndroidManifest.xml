@@ -17,27 +17,47 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
-        </activity> <!-- ============================================================================= -->
+
+        </activity>
         <activity
             android:name="com.example.mycar.Cart"
-            android:parentActivityName="com.example.mycar.Dashboard">
+            android:parentActivityName="com.example.mycar.Search">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mycar.Dashboard" />
-        </activity> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.Dashboard" /> <!-- ============================================================================= -->
+                android:value="com.example.mycar.Search" />
+        </activity>
+        <activity android:name="com.example.mycar.Dashboard" >
+
+        </activity>
+
         <activity android:name="com.example.mycar.Register" /> <!-- ============================================================================= -->
         <activity android:name="com.example.mycar.DealerSignUp" /> <!-- ============================================================================= -->
         <activity android:name="com.example.mycar.AdminSignUp" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.Login" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.DealerLogin" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.AdminLogin" /> <!-- ============================================================================= -->
+        <activity android:name="com.example.mycar.Login"
+            android:parentActivityName="com.example.mycar.Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Home" />
+        </activity>
+        <activity android:name="com.example.mycar.DealerLogin"
+            android:parentActivityName="com.example.mycar.Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Home" />
+        </activity>
+        <activity android:name="com.example.mycar.AdminLogin"
+            android:parentActivityName="com.example.mycar.Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.Home" />
+        </activity>
         <activity android:name="com.example.mycar.ForgotPassword" /> <!-- ============================================================================= -->
         <activity android:name="com.example.mycar.Settings"
             android:parentActivityName="com.example.mycar.Dashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
+
         </activity>
         <activity android:name="com.example.mycar.AboutUs"
             android:parentActivityName="com.example.mycar.Dashboard">
@@ -59,9 +79,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!-- ______________________________________________ -->
-        </activity> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.DealerDashBoard" /> <!-- ============================================================================= -->
-        <activity android:name="com.example.mycar.AdminBoard" /> <!-- ============================================================================= -->
+        </activity>
+        <activity android:name="com.example.mycar.DealerDashBoard" >
+
+        </activity>
+        <activity android:name="com.example.mycar.AdminBoard" >
+
+        </activity>
         <activity android:name="com.example.mycar.Userprofile" /> <!-- ============================================================================= -->
         <activity android:name="com.example.mycar.EditProfile" /> <!-- ============================================================================= -->
         <activity android:name="com.example.mycar.ResetPassword" /> <!-- ============================================================================= -->
@@ -71,14 +95,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dashboard" />
-        </activity> <!-- ============================================================================= -->
+
+        </activity>
         <activity
             android:name="com.example.mycar.Select"
             android:parentActivityName="com.example.mycar.Search">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Search" />
-        </activity> <!-- ============================================================================= -->
+        </activity>
         <activity
             android:name="com.example.mycar.Calendar"
             android:parentActivityName="com.example.mycar.Dashboard">
