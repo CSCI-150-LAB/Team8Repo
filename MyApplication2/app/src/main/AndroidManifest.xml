@@ -83,7 +83,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.AdminBoard" />
         </activity>
-        <activity android:name=".AdminModFee" />
+        <activity android:name=".AdminModFee"
+            android:parentActivityName=".AdminBoard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.AdminBoard" />
+        </activity>
         <activity android:name=".Home">
             <!-- ___________ STARTING ACTIVITY CODE ___________ -->
             <intent-filter>
@@ -91,11 +96,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- ______________________________________________ -->
+            <!-- ___________ STARTING ACTIVITY CODE ___________ -->
 
         </activity> <!-- ============================================================================= -->
-        <activity android:name=".DealerDashBoard" /> <!-- ============================================================================= -->
-        <activity android:name=".AdminBoard" /> <!-- ============================================================================= -->
+        <activity android:name=".DealerDashBoard" >
+
+        </activity>
+        <activity android:name=".AdminBoard" >
+
+        </activity>
         <activity android:name=".Userprofile" /> <!-- ============================================================================= -->
         <activity android:name=".EditProfile" /> <!-- ============================================================================= -->
         <activity android:name=".ResetPassword" /> <!-- ============================================================================= -->
