@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="DealerY1" type="id" />
+    <item name="DealerX1" type="id" />
+    <item name="DealerX1address" type="id" />
+    <item name="btn_DealerX" type="id" />
+    <item name="DealerY1address" type="id" />
+    <item name="btn_DealerY" type="id" />
+    <item name="AdminA1" type="id" />
+    <item name="AdminA1address" type="id" />
+    <item name="btn_AdminA" type="id" />
+    <item name="AdminB1" type="id" />
+    <item name="AdminB1address" type="id" />
+    <item name="btn_AdminB" type="id" />
+</resources>
