@@ -16,6 +16,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mycar.Dealer_Invent" />
         </activity>
+        <activity android:name=".AdminA"
+            android:parentActivityName=".AboutUs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.AboutUs" />
+        </activity>
+        <activity android:name=".AdminB"
+            android:parentActivityName=".AboutUs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.AboutUs" />
+        </activity>
+        <activity android:name=".DealerX"
+            android:parentActivityName=".AboutUs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.AboutUs" />
+        </activity>
+        <activity android:name=".DealerY"
+            android:parentActivityName=".AboutUs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mycar.AboutUs" />
+        </activity>
         <activity
             android:name=".Dealer_Invent"
             android:parentActivityName=".DealerDashBoard">
