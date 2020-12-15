@@ -35,10 +35,6 @@ public class DB_Controller extends SQLiteOpenHelper {
     public void delete_users(String username) {
         this.getWritableDatabase().delete("USERS", "USERNAME='"+username+"'",null);
     }
-
-    public void update_users(String old_username, String new_username) {
-        this.getWritableDatabase().execSQL("UPDATE USERS SET USERNAME='"+new_username+"'WHERE USERNAME'"+old_username+"'");
-    }
     public void list_all_users(TextView textView) {
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM USERS", null);
         textView.setText("");

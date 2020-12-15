@@ -61,23 +61,10 @@
         android:onClick="btn_click"/>
 
     <Button
-        android:id = "@+id/btn_update"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_remove"
-        android:layout_centerHorizontal="true"
-        android:text = "Update User Info"
-        android:textStyle = "bold"
-        android:textColor="@color/purple_200"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:onClick="btn_click"/>
-
-    <Button
         android:id = "@+id/list_all_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_update"
+        android:layout_below="@+id/btn_remove"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:background="@color/white"

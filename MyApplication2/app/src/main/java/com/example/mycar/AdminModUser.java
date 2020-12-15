@@ -40,19 +40,6 @@ public class AdminModUser extends AppCompatActivity {
             case R.id.btn_remove:
                 controller.delete_users(username.getText().toString());
                 break;
-            case R.id.btn_update:
-                AlertDialog.Builder dialog = new AlertDialog.Builder(AdminModUser.this);
-                dialog.setTitle("ENTER NEW USERNAME");
-                final EditText new_username = new EditText(this);
-                dialog.setView(new_username);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        controller.update_users(username.getText().toString(), new_username.getText().toString());
-                    }
-                });
-                dialog.show();
-                break;
             case R.id.list_all_users:
                 controller.list_all_users(textView);
                 break;
